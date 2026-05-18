@@ -71,6 +71,8 @@ export default function NotificationsPage() {
   const [notifications, setNotifications] =
     useState(MOCK_NOTIFICATIONS);
 
+    
+
   const unreadCount = notifications.filter(
     (n) => !n.is_read
   ).length;

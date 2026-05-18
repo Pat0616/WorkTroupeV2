@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './subscribe.css';
 
+import { useNavigate } from 'react-router-dom';
+
 const PLANS = [
   {
     name: 'Monthly',
@@ -44,6 +46,7 @@ export default function SubscribePage() {
   const [selected, setSelected] = useState<string | null>(null);
   const [step, setStep] = useState<Step>('select');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const selectedPlan = PLANS.find(
     (plan) => plan.name === selected
@@ -60,6 +63,12 @@ export default function SubscribePage() {
       setStep('success');
     }, 1800);
   };
+
+  const GotoHome = async() =>
+  {
+    navigate("/home");
+  }
+
 
   return (
     <div className="subscribe-page">
@@ -197,7 +206,7 @@ export default function SubscribePage() {
 
         {/* SUCCESS */}
         {step === 'success' && (
-          <div className="success-card">
+          <div className="success-card" onClick={GotoHome}>
 
             <div className="success-icon">
               ✓

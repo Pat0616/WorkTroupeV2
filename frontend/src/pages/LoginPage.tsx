@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import './login.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // TEMPORARY MOCK LOGIN
-    alert('Login UI prototype');
+
+    navigate("/subscriptions")
+
   };
 
   return (
@@ -135,6 +138,7 @@ export default function LoginPage() {
             <button
               type="submit"
               className="login-btn"
+              
             >
               Sign In
             </button>

@@ -1,0 +1,185 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(10, 5, 20, 0.7);
+
+  backdrop-filter: blur(10px);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+.modal {
+  width: 520px;
+
+  background: rgba(255,255,255,0.08);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  border-radius: 28px;
+
+  padding: 24px;
+
+  color: white;
+
+  backdrop-filter: blur(24px);
+
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+}
+
+/* HEADER */
+.modal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+
+  font-weight: 800;
+
+  background: linear-gradient(
+    90deg,
+    #fff,
+    #c4b5fd
+  );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.modal-header button {
+  background: none;
+
+  border: none;
+
+  color: #c4b5fd;
+
+  font-size: 1.4rem;
+
+  cursor: pointer;
+}
+
+/* BODY */
+.modal-body {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.modal-body input,
+.modal-body textarea,
+.modal-body select {
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  border-radius: 14px;
+
+  padding: 12px 14px;
+
+  color: white;
+
+  outline: none;
+}
+
+.modal-body textarea {
+  min-height: 90px;
+
+  resize: none;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+/* MEMBERS */
+.members {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+.member {
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  background: rgba(255,255,255,0.05);
+
+  color: #c4b5fd;
+
+  cursor: pointer;
+
+  font-size: 0.8rem;
+}
+
+.member.active {
+  background: rgba(139,92,246,0.3);
+
+  color: white;
+
+  border-color: rgba(139,92,246,0.5);
+}
+
+/* ACTIONS */
+.modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.modal-actions button {
+  padding: 10px 14px;
+
+  border-radius: 12px;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-weight: 700;
+}
+
+.modal-actions .primary {
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #7c3aed
+  );
+
+  color: white;
+}
+
+.modal-actions .danger {
+  background: rgba(239,68,68,0.2);
+
+  color: #f87171;
+}
