@@ -6,7 +6,7 @@ import './Layout.css';
 
 const NAV_ITEMS = [
   {
-    to: '/',
+    to: '/home',
     label: 'Dashboard',
     emoji: '🏠',
   },
@@ -84,7 +84,7 @@ export default function Layout({
   };
 
   const handleLogout = () => {
-    alert('Logout prototype');
+    navigate('/login');
   };
 
   return (

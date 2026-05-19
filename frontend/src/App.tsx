@@ -13,11 +13,12 @@ function App() {
   return (
     <Router>
         <Routes>
+          <Route path="/" element={<LoginPage/>}></Route>
           <Route path="/login" element={<LoginPage/>}></Route>
           <Route path="/register" element={<RegisterPage/>}></Route>
           <Route path="/subscriptions" element={<SubscribePage/>}></Route>
           <Route path="/notifications" element={<NotificationsPage/>}></Route>
-          <Route path="/" element={<HomePage/>}></Route>
+          <Route path="/home" element={<HomePage/>}></Route>
           <Route path="/groups" element={<GroupPage/>}></Route>
         </Routes>
     </Router>

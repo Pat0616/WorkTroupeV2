@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import './home.css';
+import { useNavigate } from 'react-router-dom';
 
 function GroupCard({
   group,
@@ -8,7 +9,10 @@ function GroupCard({
 }: {
   group: any;
   onClick: () => void;
-}) {
+}) 
+
+{
+  
   return (
     <div className="group-card" onClick={onClick}>
       <div className="group-top-accent" />
@@ -70,6 +74,8 @@ export default function HomePage() {
 
   const [showJoin, setShowJoin] =
     useState(false);
+
+    const navigate = useNavigate();
 
   return (
     <Layout>
@@ -180,7 +186,7 @@ export default function HomePage() {
                 key={g.id}
                 group={g}
                 onClick={() =>
-                  alert(`Open group ${g.id}`)
+                  navigate(`/groups`)
                 }
               />
             ))}

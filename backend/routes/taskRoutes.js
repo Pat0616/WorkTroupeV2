@@ -8,7 +8,7 @@ import express from 'express'
   getComments,
   addComment,
   dashboard,
-} from '../controllers/taskController'
+} from '../controllers/taskController.js'
 
 
 const taskRouter = express.Router();

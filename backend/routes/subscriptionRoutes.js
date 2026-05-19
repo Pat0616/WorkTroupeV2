@@ -3,7 +3,7 @@ import express from 'express'
  import {
     subscribe,
   getMy,
-} from '../controllers/subscriptionController'
+} from '../controllers/subscriptionController.js'
 
 
 const subscriptionRouter = express.Router();

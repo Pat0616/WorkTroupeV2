@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import db from '../db';
+import db from '../db.js';
 
 // POST /api/auth/register
 export async function register(req, res) {
@@ -199,8 +199,3 @@ export async function me(req, res) {
   }
 }
 
-export default {
-  register,
-  login,
-  me,
-};

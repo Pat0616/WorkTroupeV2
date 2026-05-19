@@ -4,7 +4,7 @@ import express from 'express'
     list,
   markRead,
   markAllRead,
-} from '../controllers/notificationController'
+} from '../controllers/notificationController.js'
 
 const notificationRouter = express.Router();
 

@@ -4,7 +4,7 @@ import{
 login,
 register,
 me
-} from '../controllers/authController'
+} from '../controllers/authController.js';
 
 
 

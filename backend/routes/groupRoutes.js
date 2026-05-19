@@ -6,7 +6,7 @@ import {
   getOne,
   join,
   remove,
-} from '../controllers/groupController'
+} from '../controllers/groupController.js'
 
 const groupRouter = express.Router();
 
